@@ -367,7 +367,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 132741803}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 225444087}
+        m_TargetAssemblyTypeName: MoveBtn, Assembly-CSharp
+        m_MethodName: MoveWithdrawal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &132741803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,7 +429,7 @@ GameObject:
   - component: {fileID: 225444086}
   - component: {fileID: 225444087}
   m_Layer: 5
-  m_Name: Main
+  m_Name: Move
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -435,8 +447,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 132741801}
   - {fileID: 1474350610}
+  - {fileID: 132741801}
   m_Father: {fileID: 860681646}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -454,9 +466,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 225444085}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9e094f14b810cd4584cbc7b3a16bfb0, type: 3}
+  m_Script: {fileID: 11500000, guid: 6cc3bbea51796424795d11a1a3b1555e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  move: {fileID: 225444085}
+  diposit: {fileID: 954759524}
+  withdrawal: {fileID: 281030928}
 --- !u!1 &279751958
 GameObject:
   m_ObjectHideFlags: 0
@@ -2308,6 +2323,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153555689}
   m_CullTransparentMesh: 1
+--- !u!1 &1170283045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1170283047}
+  - component: {fileID: 1170283046}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1170283046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170283045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0204c8e947862fe4ba96c3cab58b5b18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1170283047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170283045}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -30.006529, y: 22.316832, z: -0.3401854}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1176352106
 GameObject:
   m_ObjectHideFlags: 0
@@ -2592,7 +2651,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1307474447}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 225444087}
+        m_TargetAssemblyTypeName: MoveBtn, Assembly-CSharp
+        m_MethodName: WithdrawalBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1307474447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2915,7 +2986,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1474350612}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 225444087}
+        m_TargetAssemblyTypeName: MoveBtn, Assembly-CSharp
+        m_MethodName: MoveDiposit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1474350612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3521,7 +3604,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1645783809}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 225444087}
+        m_TargetAssemblyTypeName: MoveBtn, Assembly-CSharp
+        m_MethodName: DipositBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1645783809
 MonoBehaviour:
   m_ObjectHideFlags: 0
