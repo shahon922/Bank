@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class MoneyBtn : MonoBehaviour
 {
+    public int MoneyType;
     public static int moveMoney = 0;
 
-    public void TenThousandWon()
+    public void MoveMoney()
     {
-        moveMoney = 10000;
-    }
-
-    public void ThirtyThousandWon()
-    {
-        moveMoney = 30000;
-    }
-
-    public void FiftyThousandWon()
-    {
-        moveMoney = 50000;
+        switch (MoneyType)
+        {
+            case 0:
+                moveMoney = 10000;
+                break;
+            case 1:
+                moveMoney = 30000;
+                break;
+            case 2:
+                moveMoney = 50000;
+                break;
+        }
     }
 
 }

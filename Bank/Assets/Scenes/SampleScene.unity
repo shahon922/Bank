@@ -473,7 +473,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &225444086
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1450,7 +1450,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter text...
+  m_Text: "\uAE08\uC561\uC744 \uC785\uB825\uD558\uC138\uC694"
 --- !u!222 &629647554
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2103,6 +2103,7 @@ GameObject:
   - component: {fileID: 949123045}
   - component: {fileID: 949123044}
   - component: {fileID: 949123043}
+  - component: {fileID: 949123046}
   m_Layer: 5
   m_Name: TenThousandWon
   m_TagString: Untagged
@@ -2175,9 +2176,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1176352108}
+      - m_Target: {fileID: 949123046}
         m_TargetAssemblyTypeName: MoneyBtn, Assembly-CSharp
-        m_MethodName: TenThousandWon
+        m_MethodName: MoveMoney
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2225,6 +2226,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949123041}
   m_CullTransparentMesh: 1
+--- !u!114 &949123046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949123041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 085cfcd27d269714dab3c0a857b70be3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoneyType: 0
 --- !u!1 &954759524
 GameObject:
   m_ObjectHideFlags: 0
@@ -2240,7 +2254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &954759525
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2613,7 +2627,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1128979543}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1170283046}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Deposit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1128979543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2843,7 +2869,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cashNumTxt: {fileID: 1541751171}
   balanceNumTxt: {fileID: 377443321}
-  moneyBtn: {fileID: 0}
+  Tribe: {fileID: 1398771885}
+  inputDepositMoney: {fileID: 1901636070}
+  inputWithdrawalMoney: {fileID: 361506110}
 --- !u!4 &1170283047
 Transform:
   m_ObjectHideFlags: 0
@@ -2868,7 +2896,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1176352107}
-  - component: {fileID: 1176352108}
   m_Layer: 5
   m_Name: MoneyBtn
   m_TagString: Untagged
@@ -2901,18 +2928,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1176352108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176352106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 085cfcd27d269714dab3c0a857b70be3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1233934143
 GameObject:
   m_ObjectHideFlags: 0
@@ -3671,6 +3686,7 @@ GameObject:
   - component: {fileID: 1501606024}
   - component: {fileID: 1501606023}
   - component: {fileID: 1501606022}
+  - component: {fileID: 1501606025}
   m_Layer: 5
   m_Name: ThirtyThousandWon
   m_TagString: Untagged
@@ -3743,9 +3759,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1176352108}
+      - m_Target: {fileID: 1501606025}
         m_TargetAssemblyTypeName: MoneyBtn, Assembly-CSharp
-        m_MethodName: ThirtyThousandWon
+        m_MethodName: MoveMoney
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3793,6 +3809,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501606020}
   m_CullTransparentMesh: 1
+--- !u!114 &1501606025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501606020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 085cfcd27d269714dab3c0a857b70be3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoneyType: 1
 --- !u!1 &1541751169
 GameObject:
   m_ObjectHideFlags: 0
@@ -4045,6 +4074,7 @@ GameObject:
   - component: {fileID: 1582153966}
   - component: {fileID: 1582153965}
   - component: {fileID: 1582153964}
+  - component: {fileID: 1582153967}
   m_Layer: 5
   m_Name: FiftyThousandWon
   m_TagString: Untagged
@@ -4117,9 +4147,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1176352108}
+      - m_Target: {fileID: 1582153967}
         m_TargetAssemblyTypeName: MoneyBtn, Assembly-CSharp
-        m_MethodName: FiftyThousandWon
+        m_MethodName: MoveMoney
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4167,6 +4197,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582153962}
   m_CullTransparentMesh: 1
+--- !u!114 &1582153967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582153962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 085cfcd27d269714dab3c0a857b70be3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoneyType: 2
 --- !u!1 &1632542329
 GameObject:
   m_ObjectHideFlags: 0
@@ -4586,7 +4629,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1670264701}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1170283046}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Withdrawal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1670264701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4696,7 +4751,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter text...
+  m_Text: "\uAE08\uC561\uC744 \uC785\uB825\uD558\uC138\uC694"
 --- !u!222 &1672222325
 CanvasRenderer:
   m_ObjectHideFlags: 0

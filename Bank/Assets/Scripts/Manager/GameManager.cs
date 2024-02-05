@@ -10,8 +10,12 @@ public class GameManager : MonoBehaviour
     public Text cashNumTxt;
     public Text balanceNumTxt;
 
-    public MoneyBtn moneyBtn;
+    //public MoneyBtn moneyBtn;
+
     public GameObject Tribe;
+
+    [SerializeField] private InputField inputDepositMoney;
+    [SerializeField] private InputField inputWithdrawalMoney;
 
     int cash = 100000;
     int balance = 50000;
@@ -20,12 +24,13 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         I = this;
+       
     }
 
 
     void Start()
     {
-        moneyBtn = GetComponent<MoneyBtn>();
+        //moneyBtn = GetComponent<MoneyBtn>();
         cashNumTxt.text = cash.ToString();
         balanceNumTxt.text = balance.ToString();
         Tribe.SetActive(false);
@@ -39,9 +44,12 @@ public class GameManager : MonoBehaviour
 
     public void Deposit()
     {
-        if(1 == 1)
+        if(cash >= int.Parse(inputDepositMoney.text))
         {
-
+            cash -= int.Parse(inputDepositMoney.text);
+            balance += int.Parse(inputDepositMoney.text);
+            cashNumTxt.text = cash.ToString();
+            balanceNumTxt.text = balance.ToString();
         }
         else
         {
@@ -51,9 +59,12 @@ public class GameManager : MonoBehaviour
 
     public void Withdrawal()
     {
-        if (1 == 1)
+        if (balance >= int.Parse(inputDepositMoney.text))
         {
-
+            cash += int.Parse(inputDepositMoney.text);
+            balance -= int.Parse(inputDepositMoney.text);
+            cashNumTxt.text = cash.ToString();
+            balanceNumTxt.text = balance.ToString();
         }
         else
         {
