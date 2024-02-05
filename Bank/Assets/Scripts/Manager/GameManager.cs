@@ -31,6 +31,11 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    public void Deposit()
+    {
+
+    }
     
 
 }
