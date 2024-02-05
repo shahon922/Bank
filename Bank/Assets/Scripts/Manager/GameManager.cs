@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public Text cashNumTxt;
     public Text balanceNumTxt;
 
+    public MoneyBtn moneyBtn;
+    public GameObject Tribe;
+
     int cash = 100000;
     int balance = 50000;
 
@@ -22,8 +25,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        moneyBtn = GetComponent<MoneyBtn>();
         cashNumTxt.text = cash.ToString();
         balanceNumTxt.text = balance.ToString();
+        Tribe.SetActive(false);
     }
 
    
@@ -34,8 +39,25 @@ public class GameManager : MonoBehaviour
 
     public void Deposit()
     {
+        if(1 == 1)
+        {
 
+        }
+        else
+        {
+            Tribe.SetActive(true);
+        }
     }
-    
 
+    public void Withdrawal()
+    {
+        if (1 == 1)
+        {
+
+        }
+        else
+        {
+            Tribe.SetActive(true);
+        }
+    }
 }
