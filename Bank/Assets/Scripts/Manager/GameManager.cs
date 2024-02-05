@@ -66,4 +66,9 @@ public class GameManager : MonoBehaviour
             Tribe.SetActive(true);
         }
     }
+
+    public void ExitBtn()
+    {
+        Tribe.SetActive(false);
+    }
 }
