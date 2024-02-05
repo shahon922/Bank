@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WhitdrawalMoneyBtn : MonoBehaviour
+public class WithdrawalMoneyBtn : MonoBehaviour
 {
     private int moveMoney = 0;
 

@@ -247,7 +247,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 281030930}
-        m_TargetAssemblyTypeName: WhitdrawalMoneyBtn, Assembly-CSharp
+        m_TargetAssemblyTypeName: WithdrawalMoneyBtn, Assembly-CSharp
         m_MethodName: WithdrawalThirtyThousandWon
         m_Mode: 1
         m_Arguments:
@@ -651,7 +651,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 281030928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14eb65acbd866774d921beba89b4000d, type: 3}
+  m_Script: {fileID: 11500000, guid: 78b76bda943bd204f97debc56ac2b3e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &346868769
@@ -1649,7 +1649,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 281030930}
-        m_TargetAssemblyTypeName: WhitdrawalMoneyBtn, Assembly-CSharp
+        m_TargetAssemblyTypeName: WithdrawalMoneyBtn, Assembly-CSharp
         m_MethodName: WithdrawalFiftyThousandWon
         m_Mode: 1
         m_Arguments:
@@ -4519,7 +4519,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 281030930}
-        m_TargetAssemblyTypeName: WhitdrawalMoneyBtn, Assembly-CSharp
+        m_TargetAssemblyTypeName: WithdrawalMoneyBtn, Assembly-CSharp
         m_MethodName: WithdrawalTenThousandWon
         m_Mode: 1
         m_Arguments:
