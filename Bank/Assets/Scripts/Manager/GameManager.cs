@@ -17,8 +17,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private InputField inputDepositMoney;
     [SerializeField] private InputField inputWithdrawalMoney;
 
-    int cash = 100000;
-    int balance = 50000;
+    [HideInInspector]
+    public int cash = 100000;
+    public int balance = 50000;
 
 
     private void Awake()
@@ -36,13 +37,7 @@ public class GameManager : MonoBehaviour
         Tribe.SetActive(false);
     }
 
-   
-    void Update()
-    {
-        
-    }
-
-    public void Deposit()
+    public void InputDeposit()
     {
         if(cash >= int.Parse(inputDepositMoney.text))
         {
@@ -57,7 +52,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Withdrawal()
+    public void InputWithdrawal()
     {
         if (balance >= int.Parse(inputDepositMoney.text))
         {
