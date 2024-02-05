@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,10 +40,10 @@ public class GameManager : MonoBehaviour
 
     public void InputDeposit()
     {
-        if(cash >= int.Parse(inputDepositMoney.text))
+        if(cash >= Convert.ToInt32(inputDepositMoney.text))
         {
-            cash -= int.Parse(inputDepositMoney.text);
-            balance += int.Parse(inputDepositMoney.text);
+            cash -= Convert.ToInt32(inputDepositMoney.text);
+            balance += Convert.ToInt32(inputDepositMoney.text);
             cashNumTxt.text = cash.ToString();
             balanceNumTxt.text = balance.ToString();
         }
@@ -54,10 +55,10 @@ public class GameManager : MonoBehaviour
 
     public void InputWithdrawal()
     {
-        if (balance >= int.Parse(inputDepositMoney.text))
+        if (balance >= Convert.ToInt32(inputWithdrawalMoney.text))
         {
-            cash += int.Parse(inputDepositMoney.text);
-            balance -= int.Parse(inputDepositMoney.text);
+            cash += Convert.ToInt32(inputWithdrawalMoney.text);
+            balance -= Convert.ToInt32(inputWithdrawalMoney.text);
             cashNumTxt.text = cash.ToString();
             balanceNumTxt.text = balance.ToString();
         }
