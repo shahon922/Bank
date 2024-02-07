@@ -38,3 +38,11 @@ InputField로 출금을 하면 오류가 남 - FormatException: Input string was
 # 해결
 GameManager에서 InputWithdrawal 부분에서 input.text로 되어 있는 부분에 inputDeposit.text로 되어 있었음  
 inputDeposit를 inputWithdrawal로 변경  
+
+
+-- 2024.02.07--  
+UI 수정 + 명칭은 거의 그대로 둠  
+
+Script 전부 영상 강의와 비슷하게 변경  
+
+전에 만든것 남겼어야 하는데 잘못해서 덮어쓰기 되어버림...  
