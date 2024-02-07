@@ -8,70 +8,17 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager I;
 
-    public Text cashNumTxt;
-    public Text balanceNumTxt;
-
-    //public MoneyBtn moneyBtn;
-
-    public GameObject Tribe;
-
-    [SerializeField] private InputField inputDepositMoney;
-    [SerializeField] private InputField inputWithdrawalMoney;
-
-    [HideInInspector]
-    public int cash = 100000;
-
-    [HideInInspector]
-    public int balance = 50000;
-
+    public UserData User;
 
     private void Awake()
     {
-        I = this;
-       
-    }
-
-
-    void Start()
-    {
-        //moneyBtn = GetComponent<MoneyBtn>();
-        cashNumTxt.text = cash.ToString();
-        balanceNumTxt.text = balance.ToString();
-        Tribe.SetActive(false);
-    }
-
-    public void InputDeposit()
-    {
-        if(cash >= Convert.ToInt32(inputDepositMoney.text))
+        if(I == null)
         {
-            cash -= Convert.ToInt32(inputDepositMoney.text);
-            balance += Convert.ToInt32(inputDepositMoney.text);
-            cashNumTxt.text = cash.ToString();
-            balanceNumTxt.text = balance.ToString();
+            I = this;
         }
         else
         {
-            Tribe.SetActive(true);
-        }
-    }
-
-    public void InputWithdrawal()
-    {
-        if (balance >= Convert.ToInt32(inputWithdrawalMoney.text))
-        {
-            cash += Convert.ToInt32(inputWithdrawalMoney.text);
-            balance -= Convert.ToInt32(inputWithdrawalMoney.text);
-            cashNumTxt.text = cash.ToString();
-            balanceNumTxt.text = balance.ToString();
-        }
-        else
-        {
-            Tribe.SetActive(true);
-        }
-    }
-
-    public void ExitBtn()
-    {
-        Tribe.SetActive(false);
+            Destroy(gameObject);
+        }      
     }
 }
