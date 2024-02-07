@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector]
     public int cash = 100000;
+
+    [HideInInspector]
     public int balance = 50000;
 
 
